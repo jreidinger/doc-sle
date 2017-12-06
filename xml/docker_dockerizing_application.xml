@@ -89,8 +89,7 @@
                 <para>
                 Now you can build the image by running in the same directory as the <filename>Dockerfile</filename> resides:
                 </para>
-                <screen>
-                docker build --tag tux_application:latest .
+                <screen>&prompt.user;docker build --tag tux_application:latest .
                 </screen>
                 <para>
                  The <filename>Dockerfile</filename> example shown above
@@ -128,8 +127,7 @@
                 <para>
                 After a successful build of the <literal>tux_application</literal> image, you can start a container based on your new image:
                 </para>
-                <screen>
-                docker run -it --name application_instance tux_application:latest
+                <screen>&prompt.user;docker run -it --name application_instance tux_application:latest
                 </screen>
                 <para>
                 You have created a container that runs a single instance of your application.
@@ -204,8 +202,7 @@
                 <para>
                 You can specify a particular mount point on the host system when running a container by using the <literal>-v</literal> option:
                 </para>
-                <screen>
-                docker run -it --name testing -v /home/tux/data:/data sles12sp3:latest /bin/bash
+                <screen>&prompt.user;docker run -it --name testing -v /home/tux/data:/data sles12sp3:latest /bin/bash
                 </screen>
                 <note>
                 <para>
@@ -289,14 +286,12 @@
                 <para>
                 After a successful build, you can run a container based on the image:
                 </para>
-                <screen>
-                docker run -d --name mail_server -v /var/spool/mail:/var/spool/mail postfix:latest /bin/bash
+                <screen>&prompt.user;docker run -d --name mail_server -v /var/spool/mail:/var/spool/mail postfix:latest /bin/bash
                 </screen>
                 <para>
                 The <literal>-d</literal> option runs the container in a detached mode and further communication by using the CLI will not be possible. To reattach the container run:
                 </para>
-                <screen>
-                docker attach &lt;container identification&gt;
+                <screen>&prompt.user;docker attach &lt;container identification&gt;
                 </screen>
         </sect1>
 </chapter>

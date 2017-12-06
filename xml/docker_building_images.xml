@@ -21,8 +21,7 @@
          <para>
          After you obtain your base docker image, you can modify the image by using a <filename>Dockerfile</filename> (usually placed in the build directory). Then use the standard docker building tool to create your custom image:
          </para>
-         <screen>
-         docker build <emphasis>path_to_build_directory</emphasis>
+         <screen>&prompt.user;docker build <emphasis>path_to_build_directory</emphasis>
          </screen>
          <para>
          For more <literal>docker build</literal> options please refer to the <link xlink:href="https://docs.docker.com/engine/reference/commandline/build/">official Docker documentation</link>.
@@ -51,8 +50,7 @@
         <para>
         You can install pre-built images of &slsa; by using Zypper:
         </para>
-        <screen>
-        sudo zypper in sles11sp4-docker-image suse-sles12sp3-image
+        <screen>&prompt.user;sudo zypper in sles11sp4-docker-image suse-sles12sp3-image
         </screen>
         <para>
         Pre-built images do not have repositories configured. But when the Docker host has an SLE subscription that provides access to the product used in the image, Zypper will automatically have access to the right repositories.
@@ -60,14 +58,12 @@
         <para>
         After the pre-built images are installed, you need to list them using <literal>sle2docker</literal> to get a proper image name:
         </para>
-        <screen>
-        sle2docker list
+        <screen>&prompt.user;sle2docker list
         </screen>
         <para>
         Now you need to activate the pre-built images:
         </para>
-        <screen>
-        sle2docker activate <emphasis>PRE-BUILT_IMAGE_NAME</emphasis>
+        <screen>&prompt.user;sle2docker activate <emphasis>PRE-BUILT_IMAGE_NAME</emphasis>
         </screen>
         <para>
         After successful activation, <literal>sle2docker</literal> will display the name of the docker image. You can customize the docker image as described in <xref linkend="Customizing_Pre-build_Images"/>.
@@ -92,7 +88,7 @@
    <para>
    To obtain the list of repositories use the following command:
    </para>
-   <screen>zypper ref -s</screen>
+   <screen>&prompt.user;sudo zypper ref -s</screen>
    <para>
     It will automatically add all the repositories to your container. For
     each repository added to the system a new file will be created
