@@ -41,6 +41,6 @@ The tool is part of the official container module. You can install it by using <
 <para>
  If the conditions above are fulfilled, you can install the <literal>sle2docker</literal> tool by running:
 </para>
-<screen>&prompt:user; sudo zypper in sle2docker
+<screen>&prompt.user; sudo zypper in sle2docker
 </screen>
 </chapter>
