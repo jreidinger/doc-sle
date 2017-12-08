@@ -646,13 +646,13 @@
       placeholder with the respective device (usually
       <filename>dvd</filename>, <filename>cdrom</filename>, etc.):
      </para>
-<screen>mount -o loop /dev/<replaceable>DRIVE</replaceable> /mnt</screen>
+<screen>&prompt.user;sudo mount -o loop /dev/<replaceable>DRIVE</replaceable> /mnt</screen>
     </step>
     <step>
      <para>
       Copy all the content of the medium into the installation directory:
      </para>
-<screen>cp -a /mnt/* /images/CDs/full-<replaceable>VERSION</replaceable>-<replaceable>ARCH</replaceable></screen>
+<screen>&prompt.user;sudo cp -a /mnt/* /images/CDs/full-<replaceable>VERSION</replaceable>-<replaceable>ARCH</replaceable></screen>
     </step>
    </procedure>
    <para>
@@ -709,13 +709,13 @@
       Execute &kiwi; with the following command to prepare the first
       stage (<quote>physical extend</quote>):
      </para>
-<screen>kiwi --prepare suse-oem-preload --root oem</screen>
+<screen>&prompt.user;kiwi --prepare suse-oem-preload --root oem</screen>
     </step>
     <step>
      <para>
       Build the ISO image:
      </para>
-<screen>kiwi --create oem --type iso --destdir /tmp/myoem</screen>
+<screen>&prompt.user;kiwi --create oem --type iso --destdir /tmp/myoem</screen>
     </step>
    </procedure>
   </sect2>
